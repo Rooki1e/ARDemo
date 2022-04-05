@@ -9,29 +9,37 @@ import SwiftUI
 import RealityKit
 
 struct ContentView : View {
+    
+    @StateObject var appModel: AppModel = AppModel()
+    
     var body: some View {
-        return ARViewContainer().edgesIgnoringSafeArea(.all)
+        return TabView {
+            HomeView().tabItem {
+                NavigationLink(destination: HomeView()){
+                    Image(systemName: "play")
+                    Text("首页")
+                }
+            }
+            MissionView().tabItem {
+                NavigationLink(destination: MissionView()) {
+                    Image(systemName: "bolt.horizontal")
+                    Text("任务")
+                }
+            }
+            ShopView().tabItem {
+                NavigationLink(destination: ShopView()){
+                    Image(systemName: "cart")
+                    Text("商店")
+                }
+            }
+            SelfView().tabItem {
+                NavigationLink(destination:SelfView()){
+                    Image(systemName: "person")
+                    Text("我")
+                }
+            }
+        }.environmentObject(appModel)
     }
-}
-
-struct ARViewContainer: UIViewRepresentable {
-    
-    func makeUIView(context: Context) -> ARView {
-        
-        let arView = ARView(frame: .zero)
-        
-        // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
-        
-        // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
-        
-        return arView
-        
-    }
-    
-    func updateUIView(_ uiView: ARView, context: Context) {}
-    
 }
 
 #if DEBUG
