@@ -7,23 +7,22 @@
 
 import SwiftUI
 
-struct InfoContent: View {
+struct InfoCard: View {
+    var title:String
     var icon:Image?
     var context:String
     var body: some View {
         HStack {
-            VStack(alignment: .leading) {
-                icon
-                Text(context)
-            }
-            .padding()
+            Text(title).font(.title)
             Spacer()
-        }
+            icon
+            Text(context)
+        }.padding()
     }
 }
 
 struct InfoContent_Previews: PreviewProvider {
     static var previews: some View {
-        InfoContent(icon: Image(systemName: "person"), context: "fuck")
+        InfoCard(title: "hehe", icon: Image(systemName: "person"), context: "fuck")
     }
 }

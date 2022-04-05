@@ -19,26 +19,29 @@ struct SelfView: View {
                 Image(user.avatarResource).clipShape(Circle())
                 Text(user.name).font(.largeTitle)
                 Divider()
-                CardView(title: "位置") {
-                    InfoContent(
-                        icon: Image(systemName: "location"),
-                        context: user.location
-                    )
-                }
+                InfoCard(
+                    title: "位置",
+                    icon: Image(systemName: "location"),
+                    context: user.location
+                )
                 Divider()
-                CardView(title: "心情") {
-                    InfoContent(
-                        icon: Image(systemName: "airplane"), context: user.mood
-                    )
-                }
+                InfoCard(
+                    title: "心情",
+                    icon: Image(systemName: "airplane"),
+                    context: user.mood
+                )
                 Divider()
-                CardView(title: "想遇见") {
-                    InfoContent(icon: nil,context: user.wantToMeet)
-                }
+                InfoCard(
+                    title: "想遇见",
+                    icon: nil,
+                    context: user.wantToMeet
+                )
                 Divider()
-                CardView(title: "兴趣") {
-                    InfoContent(icon: nil, context: user.habit)
-                }
+                InfoCard(
+                    title: "兴趣",
+                    icon: nil,
+                    context: user.habit
+                )
             }
         }
     }

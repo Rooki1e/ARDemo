@@ -17,19 +17,19 @@ struct MissionView: View {
     )
     
     var body: some View {
-        VStack {
+        ZStack {
             MapView(region: $region)
                 .ignoresSafeArea(edges: .top)
-                .frame(height: 300)
             ScrollView {
                 ForEach(appModel.missions.indices) { idx in
                     let mission = appModel.missions[idx]
-                    CardView(title: mission.name) {
-                        MissionContent(
-                            location: mission.locationLabel,
-                            distance: 100,
-                            detail: mission.detail)
-                    }.onTapGesture {
+                    MissionCard(
+                        name: mission.name,
+                        location: mission.locationLabel,
+                        distance: 100,
+                        detail: mission.detail
+                    )
+                    .onTapGesture {
                             appModel.update(missionsIdx: idx)
                             region = MKCoordinateRegion(
                                 center: mission.location,
@@ -39,6 +39,7 @@ struct MissionView: View {
                     Divider()
                 }
             }
+            .background(.white.opacity(0.7))
         }
     }
 }

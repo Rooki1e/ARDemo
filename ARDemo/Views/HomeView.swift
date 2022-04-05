@@ -13,7 +13,7 @@ struct HomeView: View {
     @State var displayAR: Bool = true
     
     var body: some View {
-        ZStack(alignment: .top) {
+        ZStack() {
             ARViewContainer(displayAR: $displayAR).edgesIgnoringSafeArea([.top])
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
@@ -27,22 +27,21 @@ struct HomeView: View {
                             .font(.title)
                             .foregroundColor(.white)
                             .opacity(0.6)
-                        Spacer()
+                            .padding(.bottom)
                         Text(appModel.currentMission.name)
                             .font(.largeTitle)
                             .foregroundColor(.white)
+                        Spacer()
                     }
                 }
-                .frame(width: 200, height: 130, alignment: .leading)
                 Spacer()
                 Toggle(isOn: $displayAR) {
                     Text("AR显示")
                         .foregroundColor(.white)
                         .opacity(0.6)
+                        .frame(maxWidth: .infinity,alignment: .trailing)
                 }
-                .frame(width: 130, height: 10, alignment: .leading)
-            }
-            .padding()
+            }.padding()
         }
         
     }
@@ -50,8 +49,10 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            HomeView().environmentObject(AppModel())
+        let model = AppModel()
+        model.missionsIdx = 1;
+        return Group {
+            HomeView().environmentObject(model)
         }
     }
 }

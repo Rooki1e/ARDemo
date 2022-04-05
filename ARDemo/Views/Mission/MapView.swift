@@ -12,9 +12,7 @@ struct MapView: View {
     @EnvironmentObject var appModel:AppModel
     @Binding var region: MKCoordinateRegion
     var body: some View {
-        Map(coordinateRegion: $region).overlay {
-            Text(appModel.currentMission.name)
-        }
+        Map(coordinateRegion: $region)
     }
 }
 
