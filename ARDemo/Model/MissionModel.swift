@@ -14,6 +14,7 @@ struct MissionModel: Identifiable {
     let detail: String
     let location: CLLocationCoordinate2D
     let locationLabel: String
+    var tips: String? = nil
     var region: MKCoordinateRegion {
         get {
             return MKCoordinateRegion(

@@ -10,7 +10,116 @@
                 "name" : "surface"
               },
               "behaviors" : [
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "animationStyle" : "basic",
+                                          "duration" : 1,
+                                          "emphasisAnimationType" : "pop",
+                                          "iterations" : 1,
+                                          "target" : [
+                                            "DCE38DF0-47B7-49B0-A039-50F7D21C7251"
+                                          ]
+                                        },
+                                        "name" : {
+                                          "type" : "emphasis"
+                                        }
+                                      },
+                                      "identifier" : "CBB9939C-7F27-4151-9EF6-311FE42579E8",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "8547D34E-1261-48F4-A0FB-031576CCA8B0",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        },
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "target" : [
+                                            "DCE38DF0-47B7-49B0-A039-50F7D21C7251"
+                                          ],
+                                          "userIdentifier" : "findBall"
+                                        },
+                                        "name" : {
+                                          "type" : "custom"
+                                        }
+                                      },
+                                      "identifier" : "37A30A56-48B0-4F60-9BF4-7E3FCBCFB489",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "A2F11A94-4AF5-438D-A72B-0D26F8D886DA",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.364705890417099,
+                        0.74117648601531982,
+                        0.69019609689712524,
+                        1
+                      ],
+                      "identifier" : "6A9C6C51-00B4-40DC-B012-C71A6D55313D",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "行为",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
 
+                                },
+                                "name" : "start"
+                              },
+                              "identifier" : "F5041669-9618-49FE-B45A-50F13DA0C7A2",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                }
               ],
               "gravity" : [
                 0,
@@ -103,9 +212,9 @@
                   0.56733047962188721,
                   0.82339906692504883,
                   0,
-                  0.0090843494981527328,
-                  0.47465246915817261,
-                  0.59537357091903687,
+                  0.0097648557275533676,
+                  0.41967892646789551,
+                  0.63324087858200073,
                   1
                 ],
                 "sceneTransform" : [
@@ -140,7 +249,121 @@
                 "url" : "image:8ce387320af6919148546f20fa1b821a\/IMG_4694.jpeg"
               },
               "behaviors" : [
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "axis" : [
+                                            0,
+                                            1,
+                                            0
+                                          ],
+                                          "direction" : "clockwise",
+                                          "duration" : 1,
+                                          "iterations" : 1,
+                                          "target" : [
+                                            "3DAADD33-B201-4DE2-9C66-3CBD3977DE6F"
+                                          ]
+                                        },
+                                        "name" : {
+                                          "type" : "spin"
+                                        }
+                                      },
+                                      "identifier" : "168C6D7E-8E1A-48D2-8B82-55D190B766AA",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "087CD53B-6FF5-4245-BCD1-31989129C78D",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        },
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "target" : [
+                                            "3DAADD33-B201-4DE2-9C66-3CBD3977DE6F",
+                                            "BAB6A6B6-DD76-48C7-8745-5FB0C7FFE985"
+                                          ],
+                                          "userIdentifier" : "findFriend"
+                                        },
+                                        "name" : {
+                                          "type" : "custom"
+                                        }
+                                      },
+                                      "identifier" : "E27BD114-F5F0-45A5-ABD9-8636FED5FF7C",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "F20D5CCC-14E8-4FC4-B3F1-AE6C1D7EEE01",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.364705890417099,
+                        0.74117648601531982,
+                        0.69019609689712524,
+                        1
+                      ],
+                      "identifier" : "D4164193-E241-4BF5-99F5-5A286F843A91",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "行为",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
 
+                                },
+                                "name" : "start"
+                              },
+                              "identifier" : "413F3475-99C9-4027-8DA0-3FA0D68738B3",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                }
               ],
               "gravity" : [
                 0,
@@ -314,7 +537,7 @@
                           "height",
                           {
                             "typeName" : "Double",
-                            "value" : 0.0019999999999999892
+                            "value" : 0.0019999999999999905
                           }
                         ],
                         [
@@ -713,9 +936,9 @@
                   0.97847229242324829,
                   0.20637683570384979,
                   0,
-                  -0.18391810357570648,
-                  3.2755463123321533,
-                  0.16372275352478027,
+                  -0.17973445355892181,
+                  3.1458420753479004,
+                  0.77869057655334473,
                   1
                 ],
                 "sceneTransform" : [

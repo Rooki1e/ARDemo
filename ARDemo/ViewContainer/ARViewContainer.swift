@@ -11,11 +11,18 @@ import RealityKit
 
 struct ARViewContainer: UIViewRepresentable {
     
+    @EnvironmentObject var appModel:AppModel
     @Binding var displayAR:Bool
     
     func getAllAnchors() -> [RealityKit.Entity & RealityKit.HasAnchoring] {
         let yscAnchor = try! Experience.loadYSC()
         let ballAnchor = try! Experience.loadBall()
+        
+        yscAnchor.actions.findFriend.onAction = { (_: Entity?)->Void in
+            debugPrint("set findFriend true")
+            appModel.findFriend = true
+        }
+        
         return [yscAnchor,ballAnchor]
     }
     
