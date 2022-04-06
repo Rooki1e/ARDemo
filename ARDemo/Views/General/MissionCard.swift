@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct MissionCard: View {
-    var name: String
-    var location: String
-    var distance: Float
-    var detail: String
+    
+    @EnvironmentObject var appModel: AppModel
+    
+    let name: String
+    let location: String
+    let distance: Float
+    let detail: String
+    let idx: Int
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -33,12 +37,19 @@ struct MissionCard: View {
             }
             .padding()
             Spacer()
+            if(idx == appModel.missionsIdx){
+                Image(systemName: "checkmark.circle.fill")
+            }else{
+                Image(systemName: "checkmark.circle")
+            }
         }
+        .padding()
     }
 }
 
 struct MissionContent_Previews: PreviewProvider {
     static var previews: some View {
-        MissionCard(name:"eeeeeee",location: "海峡两岸青年林", distance: 0.1, detail: "abcdgserkogwergraffd")
+        MissionCard(name:"eeeeeee",location: "海峡两岸青年林", distance: 0.1, detail: "abcdgserkogwergraffd",idx: 0)
+            .environmentObject(AppModel())
     }
 }

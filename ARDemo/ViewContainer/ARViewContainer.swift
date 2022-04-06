@@ -14,12 +14,9 @@ struct ARViewContainer: UIViewRepresentable {
     @Binding var displayAR:Bool
     
     func getAllAnchors() -> [RealityKit.Entity & RealityKit.HasAnchoring] {
-        let boxAnchor = try! Experience.loadBox()
-        boxAnchor.actions.clickOnBox.onAction = {(_ entity: Entity?)->Void in
-            
-        }
+        let yscAnchor = try! Experience.loadYSC()
         let ballAnchor = try! Experience.loadBall()
-        return [boxAnchor,ballAnchor]
+        return [yscAnchor,ballAnchor]
     }
     
     func makeUIView(context: Context) -> ARView {

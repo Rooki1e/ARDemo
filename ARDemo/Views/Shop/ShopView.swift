@@ -106,7 +106,6 @@ struct ShopView: View {
                 DetailView(clothingData: $selectedClothing, show: $show,animation: animation)
             }
         }
-        .ignoresSafeArea(.all, edges:.top)
     }
 }
 

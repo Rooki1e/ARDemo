@@ -13,35 +13,43 @@ struct HomeView: View {
     @State var displayAR: Bool = true
     
     var body: some View {
-        ZStack() {
-            ARViewContainer(displayAR: $displayAR).edgesIgnoringSafeArea([.top])
-            HStack(alignment: .top) {
-                VStack(alignment: .leading) {
-                    if appModel.missionsIdx == nil {
-                        Text("无任务")
-                            .font(.largeTitle)
-                            .foregroundColor(.white)
-                        Spacer()
-                    }else{
-                        Text("当前任务")
-                            .font(.title)
+        ZStack(alignment: .top) {
+            ARViewContainer(displayAR: $displayAR)
+                .edgesIgnoringSafeArea([.top])
+            VStack {
+                HStack(alignment: .top) {
+                    VStack(alignment: .leading) {
+                        if appModel.missionsIdx == nil {
+                            Text("无任务")
+                                .font(.largeTitle)
+                                .foregroundColor(.white)
+                        }else{
+                            Text("当前任务")
+                                .font(.title)
+                                .foregroundColor(.white)
+                                .opacity(0.6)
+                                .padding(.bottom)
+                            Text(appModel.currentMission.name)
+                                .font(.largeTitle)
+                                .foregroundColor(.white)
+                        }
+                    }
+                    Spacer()
+                    Toggle(isOn: $displayAR) {
+                        Text("AR显示")
                             .foregroundColor(.white)
                             .opacity(0.6)
-                            .padding(.bottom)
-                        Text(appModel.currentMission.name)
-                            .font(.largeTitle)
-                            .foregroundColor(.white)
-                        Spacer()
+                            .frame(maxWidth: .infinity,alignment: .trailing)
+                    }
+                }.padding()
+                Spacer()
+                Button(action:{}) {
+                    if appModel.isOnMissionPlace {
+                    Text("已到任务点，点击开始任务")
                     }
                 }
                 Spacer()
-                Toggle(isOn: $displayAR) {
-                    Text("AR显示")
-                        .foregroundColor(.white)
-                        .opacity(0.6)
-                        .frame(maxWidth: .infinity,alignment: .trailing)
-                }
-            }.padding()
+            }
         }
         
     }

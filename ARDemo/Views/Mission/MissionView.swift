@@ -27,7 +27,8 @@ struct MissionView: View {
                         name: mission.name,
                         location: mission.locationLabel,
                         distance: 100,
-                        detail: mission.detail
+                        detail: mission.detail,
+                        idx: idx
                     )
                     .onTapGesture {
                             appModel.update(missionsIdx: idx)

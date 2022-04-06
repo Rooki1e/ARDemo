@@ -8,7 +8,6 @@
 import Foundation
 import Combine
 import MapKit
-import AVFAudio
 
 class AppModel: ObservableObject {
     var currentMission: MissionModel {
@@ -25,9 +24,16 @@ class AppModel: ObservableObject {
     ]
     @Published var isARDisplay: Bool = true
     func update(missionsIdx:Int)->Void{
+        if(self.missionsIdx == missionsIdx){
+            self.missionsIdx = nil
+            return
+        }
         self.missionsIdx = missionsIdx
     }
     func setARDisplay(_ value:Bool){
         isARDisplay = value
+    }
+    var isOnMissionPlace: Bool {
+        return missionsIdx != nil
     }
 }
